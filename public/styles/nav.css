@@ -7,7 +7,7 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  position: fixed;
 }
 #nav-span{
   font-family: 'Bungee',sans-serif;
