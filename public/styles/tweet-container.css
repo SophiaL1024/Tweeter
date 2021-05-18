@@ -12,6 +12,7 @@
   height: 20px;
   display: flex;
   justify-content: space-between;
+  margin: 0 15px;
 }
 #mention{
   color:lightgrey;
@@ -23,6 +24,7 @@
 }
 .tweet footer{
   font-size: 16px;
+  margin: 0 15px;
   display: flex;
   justify-content: space-between;
 }
@@ -32,7 +34,7 @@
 }
 
 .tweet:hover{
-  box-shadow:10px 15px rgba(210, 205, 241, 0.99);
+  box-shadow:10px 15px rgba(216, 213, 231, 0.99);
 }
 
 .tweet footer i:hover{
