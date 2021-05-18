@@ -16,20 +16,25 @@
 #mention{
   color:lightgrey;
 } 
-
 .tweet p{
   height: 170px;
   border-bottom: 4px solid ;
   margin: 10px 0;
 }
-
 .tweet footer{
   font-size: 16px;
   display: flex;
   justify-content: space-between;
 }
-
 .tweet footer i{
   margin:0 4px;
   color:  #4056A1 ;
+}
+
+.tweet:hover{
+  box-shadow:10px 15px rgba(210, 205, 241, 0.99);
+}
+
+.tweet footer i:hover{
+  color: rgb(206, 135, 5);
 }
