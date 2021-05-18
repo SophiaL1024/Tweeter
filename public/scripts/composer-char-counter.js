@@ -1,15 +1,15 @@
 $(document).ready(function() {
-  $('#tweet-text').keypress(function() {
-
-    //decrease the value of counter by each keypress
-    $(this).parent().find('.counter').html(140-$(this).val().length-1);
+  $('#tweet-text').on('input',function() {
+    //calculate remaining characters by each input, and assign the value to counter
+    $(this).parent().find('.counter').html(140 - $(this).val().length);
 
     //get the immediate value of counter, and check if it is negative
-   const counts = $(this).parent().find('.counter').html();    
+    const counts = $(this).parent().find('.counter').html();    
     if (counts < 0) {
-      $(this).parent().find('.counter').addClass('negative');
-    };
+      $(this).parent().find('.counter').addClass('negative');     
+    }else{
+      $(this).parent().find('.counter').removeClass('negative');
+    }
 
   })
-
 });
