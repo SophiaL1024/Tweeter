@@ -1,8 +1,4 @@
 
-label{
-  /* position: absolute; */
-  
-}
 #tweet-text{
   border: none;
   resize: none;
@@ -26,4 +22,8 @@ label{
   font-family: 'Bungee',ans-serif;
   font-size: 18px;
   padding: 3px 10px;
+}
+ 
+.negative{
+  color:red;
 }
