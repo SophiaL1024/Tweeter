@@ -1,0 +1,35 @@
+.tweet{
+  border: 4px solid;
+  height: 200px;
+  width: 100%;
+  margin-top: 50px;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+.tweet header{
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+#mention{
+  color:lightgrey;
+} 
+
+.tweet p{
+  height: 170px;
+  border-bottom: 4px solid ;
+  margin: 10px 0;
+}
+
+.tweet footer{
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet footer i{
+  margin:0 4px;
+  color:  #4056A1 ;
+}

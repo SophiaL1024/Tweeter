@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-
+  <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -47,7 +47,7 @@
     </div>
   </nav>
 
-  <header>
+  <header id="avatar-header">
     <div id="avatar">
       <img id="avatar-img" src="/images/profile-hex.png">
     </div>
@@ -56,7 +56,6 @@
       <h2 id="header-h2">Your Name</h2>
     </div>
   </header>
-
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
@@ -69,6 +68,19 @@
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
+    </section>
+    <section class="tweet-container">
+      <article class="tweet">
+        <header>
+          <span><i class="far fa-grin-beam"></i> Newton</span>
+          <span id="mention">@Sirlsaac</span>
+        </header>
+        <p></p>
+        <footer>
+          <span>10 days ago</span>
+          <div><i class="fas fa-flag"></i><i class="fas fa-redo-alt"></i><i class="fas fa-heart"></i></div>
+        </footer>
+      </article>
     </section>
   </main>
 </body>
