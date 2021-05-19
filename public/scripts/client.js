@@ -35,6 +35,14 @@ $(document).ready(function() {
   //form submission event handler
   $('form').submit(function(event) {
     event.preventDefault();
+    //check form validation
+    if (!$(this).find('#tweet-text').val()) {
+      alert("Tell me something, the tweet is empty.");
+      return;
+    } else if ($(this).find('.counter').val() < 0) {
+      alert("Character number exceeds the maximum limit!");
+      return;
+    }
     //post tweet to server
     $.ajax({
       url: '/tweets',
