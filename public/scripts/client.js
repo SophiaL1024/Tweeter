@@ -50,7 +50,7 @@ $(document).ready(function() {
     }
     //clear former error message
     $('#error').html('');
-    $('#error').removeAttr('#error');
+    $('#error').css("display", "none");
     //post tweet to server
     $.ajax({
       url: '/tweets',
