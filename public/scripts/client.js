@@ -41,13 +41,16 @@ $(document).ready(function() {
     //check form validation
     if (!$(this).find('#tweet-text').val()) {
       $('#error').html($(`<i class="fas fa-exclamation-triangle"></i>Tell me something, the tweet is empty. <i class="fas fa-exclamation-triangle"></i>`));
-      $('#error').addClass('error');
+      $('#error').addClass('error');     
       return;
     } else if ($(this).find('.counter').val() < 0) {
       $('#error').html($(`<i class="fas fa-exclamation-triangle"></i>Too long. Character number exceeds the maximum limit! <i class="fas fa-exclamation-triangle"></i>`));
       $('#error').addClass('error');
       return;
     }
+    //clear former error message,after submiting
+    $('#error').html('');
+    $('#error').removeClass('error');
     //post tweet to server
     $.ajax({
       url: '/tweets',
