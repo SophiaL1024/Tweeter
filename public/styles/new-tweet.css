@@ -6,15 +6,15 @@
   border-bottom: 4px solid;
   display: block;
   width: 100%;  
-  background-color: transparent;
-  
+  height: 60px;
+  line-height: 70px;
+  background-color: transparent;  
 }
 
 #submit-div{
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
-  
+  margin-top: 10px;  
 }
 
 #submit-btn{
