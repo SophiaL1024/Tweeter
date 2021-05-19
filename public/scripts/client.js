@@ -29,7 +29,7 @@ $(document).ready(function() {
   //create new tweet element
   const createTweetElement = function(obj) {
     //calculate the time passed by timeago library 
-    const time=timeago.format(obj.created_at);
+    const time = timeago.format(obj.created_at);
 
     const $tweet = $(`
     <article class="tweet">
@@ -60,7 +60,16 @@ $(document).ready(function() {
 
   renderTweets(data);
 
-
+  //post tweet to server
+  $('form').submit(function(event) {
+    event.preventDefault();
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      //Data to be sent to the server.Serialize data submitted by form
+      data: $(this).serialize()
+    })
+  })
 
 
 
