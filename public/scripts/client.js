@@ -26,10 +26,10 @@ $(document).ready(function() {
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
-    tweets.forEach(element => {
-      const $tweet = createTweetElement(element);
+    for (let i = tweets.length - 1; i >= 0; i--) {
+      const $tweet = createTweetElement(tweets[i]);
       $('#tweets-container').append($tweet);
-    });
+    }
   };
 
   //form submission event handler
@@ -50,8 +50,8 @@ $(document).ready(function() {
       //Data to be sent to the server.Serialize data submitted by form 
       data: $(this).serialize()
     })
-    //use loadTweets() to fetch tweets and render the web page
-    loadTweets();
+    //after submiting, refetch the message
+
   });
 
   //fetch tweets from server
@@ -64,4 +64,7 @@ $(document).ready(function() {
         renderTweets(data);
       })
   }
+
+  //use loadTweets() to fetch tweets and render the web page
+  loadTweets();
 })
