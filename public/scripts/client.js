@@ -40,10 +40,12 @@ $(document).ready(function() {
     event.preventDefault();
     //check form validation
     if (!$(this).find('#tweet-text').val()) {
-      alert("Tell me something, the tweet is empty.");
+      $('#error').html("Tell me something, the tweet is empty.");
+      $('#error').addClass('error');
       return;
     } else if ($(this).find('.counter').val() < 0) {
-      alert("Character number exceeds the maximum limit!");
+      $('#error').html("Too long. Character number exceeds the maximum limit!");
+      $('#error').addClass('error');
       return;
     }
     //post tweet to server
