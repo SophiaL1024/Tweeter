@@ -23,13 +23,15 @@ $(document).ready(function() {
 
   //render the new created tweet
   const renderTweets = function(tweets) {
+    //on each rendering, empty all children
+    $('#tweets-container').empty();
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
-    for (let i = tweets.length - 1; i >= 0; i--) {
-      const $tweet = createTweetElement(tweets[i]);
-      $('#tweets-container').append($tweet);
-    }
+    tweets.forEach(element => {
+      const $tweet = createTweetElement(element);
+      $('#tweets-container').prepend($tweet);
+    });
   };
 
   //form submission event handler
@@ -46,15 +48,17 @@ $(document).ready(function() {
     //post tweet to server
     $.ajax({
       url: '/tweets',
-      method: 'POST',
-      //Data to be sent to the server.Serialize data submitted by form 
-      data: $(this).serialize()
+      method: 'POST',      
+      data: $(this).serialize() //Data to be sent to the server.Serialize data submitted by form 
     })
-    //after submiting, refetch the message
-
+      //after submiting, refetch the message
+      .then(() => {
+        loadTweets();
+        $('#tweet-text').val(''); //clear the textarea
+      })
   });
 
-  //fetch tweets from server
+  //define a function to fetch tweets from server
   const loadTweets = function() {
     $.ajax({
       url: "/tweets",
@@ -65,6 +69,6 @@ $(document).ready(function() {
       })
   }
 
-  //use loadTweets() to fetch tweets and render the web page
+  //call the loadTweets function when page loading
   loadTweets();
 })
