@@ -38,19 +38,19 @@ $(document).ready(function() {
   //form submission event handler
   $('form').submit(function(event) {
     event.preventDefault();
-    //check form validation
+    //check form validation, display error message by jQuery 
     if (!$(this).find('#tweet-text').val()) {
       $('#error').html($(`<i class="fas fa-exclamation-triangle"></i>Tell me something, the tweet is empty. <i class="fas fa-exclamation-triangle"></i>`));
-      $('#error').addClass('error');     
+      $('#error').slideDown();
       return;
     } else if ($(this).find('.counter').val() < 0) {
       $('#error').html($(`<i class="fas fa-exclamation-triangle"></i>Too long. Character number exceeds the maximum limit! <i class="fas fa-exclamation-triangle"></i>`));
-      $('#error').addClass('error');
+      $('#error').slideDown();
       return;
     }
-    //clear former error message,after submiting
+    //clear former error message
     $('#error').html('');
-    $('#error').removeClass('error');
+    $('#error').removeAttr('#error');
     //post tweet to server
     $.ajax({
       url: '/tweets',
