@@ -11,6 +11,4 @@ $(document).ready(function() {
       $(this).parent().find('.counter').removeClass('negative');
     }
   })
-  //display the time passed by timeago library 
-  $('#time-ago').html(timeago.format(1473245023718));
 });

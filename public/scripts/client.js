@@ -1,11 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-
-
 $(document).ready(function() {
   // Fake data taken from initial-tweets.json
   const data = [
@@ -34,7 +26,11 @@ $(document).ready(function() {
     }
   ]
 
+  //create new tweet element
   const createTweetElement = function(obj) {
+    //calculate the time passed by timeago library 
+    const time=timeago.format(obj.created_at);
+
     const $tweet = $(`
     <article class="tweet">
         <header>
@@ -43,7 +39,7 @@ $(document).ready(function() {
         </header>
         <p>${obj.content.text}</p>
         <footer>
-          <span id="time-ago">${obj.created_at}</span>
+          <span id="time-ago">${time}</span>
           <div><i class="fas fa-flag"></i><i class="fas fa-redo-alt"></i><i class="fas fa-heart"></i></div>
         </footer>
     </artical>
@@ -51,6 +47,7 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  //render the new created tweet
   const renderTweets = function(tweets) {
     // loops through tweets
     // calls createTweetElement for each tweet
@@ -62,4 +59,9 @@ $(document).ready(function() {
   };
 
   renderTweets(data);
+
+
+
+
+
 })
