@@ -40,11 +40,11 @@ $(document).ready(function() {
     event.preventDefault();
     //check form validation
     if (!$(this).find('#tweet-text').val()) {
-      $('#error').html("Tell me something, the tweet is empty.");
+      $('#error').html($(`<i class="fas fa-exclamation-triangle"></i>Tell me something, the tweet is empty. <i class="fas fa-exclamation-triangle"></i>`));
       $('#error').addClass('error');
       return;
     } else if ($(this).find('.counter').val() < 0) {
-      $('#error').html("Too long. Character number exceeds the maximum limit!");
+      $('#error').html($(`<i class="fas fa-exclamation-triangle"></i>Too long. Character number exceeds the maximum limit! <i class="fas fa-exclamation-triangle"></i>`));
       $('#error').addClass('error');
       return;
     }
