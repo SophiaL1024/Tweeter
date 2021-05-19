@@ -9,7 +9,7 @@
   justify-content: stretch;
 }
 .tweet header{
-  height: 20px;
+  height: 90px;
   display: flex;
   justify-content: space-between;
   margin: 0 15px;
@@ -18,9 +18,10 @@
   color:lightgrey;
 } 
 .tweet p{
-  height: 170px;
+  height: 100px;
   border-bottom: 4px solid ;
   margin: 10px 0;
+  text-indent: 15px;
 }
 .tweet footer{
   font-size: 16px;
