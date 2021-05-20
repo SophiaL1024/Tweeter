@@ -10,10 +10,10 @@ $(document).ready(function() {
   $(document).scroll(function() {
     if($(this).scrollTop()>150){
       $(this).find('#to-top').css("display", "block");
-      $(this).find('#nav-div').css("display", "none");
+      $(this).find('nav>div').css("display", "none");
     }else{
       $(this).find('#to-top').css("display", "none");
-      $(this).find('#nav-div').css("display", "block");
+      $(this).find('nav>div').css("display", "flex");
     }
   })
 
