@@ -8,7 +8,7 @@ $(document).ready(function() {
 
   //scroll event handler. When scrollTop >150 show to-top btn and hide nav btn, and vice versa.
   $(document).scroll(function() {
-    if($(this).scrollTop()>150){
+    if($(this).scrollTop()>100){
       $('#to-top').css("display", "block");
       $('nav>div').css("display", "none");
     }else{
