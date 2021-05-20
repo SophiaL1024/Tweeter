@@ -6,18 +6,20 @@ $(document).ready(function() {
   });
   // $(this).parents().filter('body').find('#tweet-text').focus();
 
-  //when 
+  //scroll event handler. When scrollTop >150 show to-top btn and hide nav btn, and vice versa.
   $(document).scroll(function() {
-    if($(this)){
+    if($(this).scrollTop()>150){
       $(this).find('#to-top').css("display", "block");
       $(this).find('#nav-div').css("display", "none");
+    }else{
+      $(this).find('#to-top').css("display", "none");
+      $(this).find('#nav-div').css("display", "block");
     }
   })
 
   //go up to the top of page 
   $('#to-top').click(function() {
-    $("html, body").animate({
-      scrollTop: 0
-    }, 200);
+    $(window).scrollTop(0);
   })
+
 });
