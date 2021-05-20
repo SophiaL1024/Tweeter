@@ -61,6 +61,7 @@ $(document).ready(function() {
       .then(() => {
         loadTweets();
         $('#tweet-text').val(''); //clear the textarea
+        $('.counter').html(140);//reset the counter
       })
   });
 
