@@ -1,25 +1,27 @@
 $(document).ready(function() {
 
-  //toggle the form
+  //toggle the form and get focus
   $('#compose').click(function() {
-    $(this).parents().filter('body').find('#new-tweet').slideToggle();
+    $('#new-tweet').slideToggle();
+    $('#tweet-text').focus();
   });
-  // $(this).parents().filter('body').find('#tweet-text').focus();
 
   //scroll event handler. When scrollTop >150 show to-top btn and hide nav btn, and vice versa.
   $(document).scroll(function() {
     if($(this).scrollTop()>150){
-      $(this).find('#to-top').css("display", "block");
-      $(this).find('nav>div').css("display", "none");
+      $('#to-top').css("display", "block");
+      $('nav>div').css("display", "none");
     }else{
-      $(this).find('#to-top').css("display", "none");
-      $(this).find('nav>div').css("display", "flex");
+      $('#to-top').css("display", "none");
+      $('nav>div').css("display", "flex");
     }
   })
 
-  //go up to the top of page 
+  //go up to the top of page, and slide down the textarea. 
   $('#to-top').click(function() {
     $(window).scrollTop(0);
+    $('#new-tweet').slideDown();
+    $('#tweet-text').focus();
   })
 
 });
