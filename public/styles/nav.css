@@ -25,6 +25,6 @@ nav i{
 @media only screen and (min-width:1024px){
   nav{ 
     background-color: #4056A1;  
-    position: static;
+    /* position: static; */
   }
 }
