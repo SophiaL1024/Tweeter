@@ -16,7 +16,7 @@
 #avatar>img{
   width: 100%;
 }
-header h2{
+#avatar-header h2{
   color: #fff;
   display: inline;
 }
@@ -25,5 +25,15 @@ header h2{
     width: 30vw;
     margin: 170px auto 50px 50px;
     padding: 0;   
+  }
+}
+@media only screen and (max-width:414px){
+  #avatar-header{
+    height: 200px;
+    padding-top: 60px;
+  }
+  #avatar{
+    width: 100px;
+    height: 100px;
   }
 }

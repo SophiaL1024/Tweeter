@@ -37,3 +37,14 @@ nav i{
     background-color: #4056A1;  
   }
 }
+@media only screen and (max-width:414px){
+  nav{ 
+  padding:20px ;
+  height: 60px;
+  }
+  nav>div{
+    font-size: 18px;
+    justify-content: center;
+  }
+
+}

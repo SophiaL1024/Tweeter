@@ -21,3 +21,12 @@ outline: none;
 #to-top:hover i{
   color:red;
 }
+@media only screen and (max-width:414px){
+  #to-top{
+    width: 40px;
+    height: 40px;
+  }
+  #to-top i{
+    font-size: 1em;
+  }
+}
