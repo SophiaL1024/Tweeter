@@ -1,0 +1,22 @@
+#to-top{
+background-color: red;
+width: 70px;
+height: 70px;
+border-radius: 50% ;
+border: 0px;
+position: fixed;
+bottom: 10px;
+right: 10px;
+display: none;
+outline: none;
+}
+#to-top i{
+  color: #fff;
+  font-size: 1.5em;
+}
+#to-top:hover{
+  background-color:#fff;
+}
+#to-top:hover i{
+  color:red;
+}
