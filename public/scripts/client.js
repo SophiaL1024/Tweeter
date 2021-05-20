@@ -77,4 +77,10 @@ $(document).ready(function() {
 
   //call the loadTweets function when page loading
   loadTweets();
+
+  //
+  $('#compose').click(function() {
+    $(this).parents().filter('body').find('#new-tweet').slideToggle();
+  });
+  // $(this).parents().filter('body').find('#tweet-text').focus();
 })

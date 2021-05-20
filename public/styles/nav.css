@@ -17,14 +17,24 @@ nav{
 #nav-div{
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 nav i{
   color: red;
   align-self: center;
 }
+#compose{
+  display: inline-block;
+  border: none;
+  color: #fff;
+  background-color: transparent;
+  outline: none;
+}
+#compose:hover{
+  color: red;
+}
 @media only screen and (min-width:1024px){
   nav{ 
     background-color: #4056A1;  
-    /* position: static; */
   }
 }
