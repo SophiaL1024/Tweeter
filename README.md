@@ -30,3 +30,10 @@ It can:
 - body-parser 1.15.2 or above
 - chance" 1.0.2 or above
 - md5" 2.1.0 or above
+
+ ## Screenshots
+ !["Screenshots of tweets"](https://github.com/SophiaL1024/Tweeter/blob/master/docs/tweet-desktop.png)
+
+ !["Screenshots of tweets"](https://github.com/SophiaL1024/Tweeter/blob/master/docs/tweet-medium%20screen.png)
+
+ !["Screenshots of tweets"](https://github.com/SophiaL1024/Tweeter/blob/master/docs/tweet-mobile.png)
