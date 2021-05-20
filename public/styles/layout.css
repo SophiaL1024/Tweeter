@@ -34,7 +34,7 @@ body {
     flex-flow: row wrap;
   }
   main{
-    width: 50%;   
+    width: 50vw;   
     margin: 170px 50px 50px auto;
   }
 }
