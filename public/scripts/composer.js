@@ -6,12 +6,12 @@ $(document).ready(function() {
     $('#tweet-text').focus();
   });
 
-  //scroll event handler. When scrollTop >150 show to-top btn and hide nav btn, and vice versa.
+  //scroll event handler. When scrollTop >100 show to-top btn and hide nav btn, and vice versa.
   $(document).scroll(function() {
-    if($(this).scrollTop()>100){
+    if ($(this).scrollTop() > 100) {
       $('#to-top').css("display", "block");
       $('nav>div').css("display", "none");
-    }else{
+    } else {
       $('#to-top').css("display", "none");
       $('nav>div').css("display", "flex");
     }

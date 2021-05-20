@@ -8,7 +8,7 @@ $(document).ready(function() {
     const $tweetHead = $(`   
         <header>
           <span><img src=${obj.user.avatars}> ${obj.user.name}</span>
-          <span id="handle">${obj.user.handle}</span>
+          <span class="handle">${obj.user.handle}</span>
         </header>`);
     //escape unsafe text
     const $tweetBody = $('<p>').text(`${obj.content.text}`);
@@ -55,11 +55,10 @@ $(document).ready(function() {
     $.ajax({
       url: '/tweets',
       method: 'POST',
-      data: $(this).serialize() //Data to be sent to the server.Serialize data submitted by form.
-    })
-      //after submiting, refetch the message
+      data: $(this).serialize() //Data to be sent to the server.Serialize data.
+    })      
       .then(() => {
-        loadTweets();
+        loadTweets();//after submiting, refetch the message
         $('#tweet-text').val(''); //clear the textarea
         $('.counter').html(140);//reset the counter
       })

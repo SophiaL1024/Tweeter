@@ -13,10 +13,10 @@
   width: 205px;
   height:205px ;
 }
-#avatar-img{
+#avatar>img{
   width: 100%;
 }
-#header-h2{
+header h2{
   color: #fff;
   display: inline;
 }

@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   $('#tweet-text').on('input', function() {
     //calculate remaining characters by each input, and assign the value to counter
     $(this).parent().find('.counter').html(140 - $(this).val().length);
@@ -11,4 +12,5 @@ $(document).ready(function() {
       $(this).parent().find('.counter').removeClass('negative');
     }
   })
+
 });
