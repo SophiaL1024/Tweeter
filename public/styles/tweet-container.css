@@ -59,11 +59,11 @@
     width: 3em;
     height: 3em;
   }
-  .tweet p{
-    margin: 0;
-  }
   .handle{
     font-size: 12px;
+  }
+  .tweet footer{
+    margin: 0 15px;
   }
   .tweet footer i{
     font-size:12px ;

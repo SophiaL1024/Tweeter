@@ -32,6 +32,9 @@
     height: 200px;
     padding-top: 60px;
   }
+  br{
+   display: none;
+  }
   #avatar{
     width: 100px;
     height: 100px;
