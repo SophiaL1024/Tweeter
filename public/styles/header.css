@@ -7,8 +7,7 @@
   justify-content: center;
   align-items: center;
   background-color: #fabc41;
-  background-image: url("https://www.transparenttextures.com/patterns/food.png");
-  
+  background-image: url("https://www.transparenttextures.com/patterns/food.png");  
 }
 #avatar{
   width: 205px;
@@ -20,4 +19,11 @@
 #header-h2{
   color: #fff;
   display: inline;
+}
+@media only screen and (min-width:1024px){
+  #avatar-header{
+    width: 30%;
+    margin: 50px auto 50px 50px;
+    padding: 0;   
+  }
 }

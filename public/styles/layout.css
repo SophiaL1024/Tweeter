@@ -13,6 +13,10 @@ html {
 /*
  * Global layout stuff
  */
+main{
+  width: 90%;
+  margin: 0 auto;
+}
 
 body {
   color: #545149;
@@ -24,7 +28,13 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-main{
-  width: 90%;
-  margin: auto;
+@media only screen and (min-width:1024px){
+  body{
+    display: flex;
+    flex-flow: row wrap;
+  }
+  main{
+    width: 50%;   
+    margin: 50px 50px 50px auto;
+  }
 }
