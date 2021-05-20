@@ -6,14 +6,18 @@ $(document).ready(function() {
   });
   // $(this).parents().filter('body').find('#tweet-text').focus();
 
-  $(document).scroll(function(){
-    $(this).find('#to-top').css("display","block");
-    $(this).find('#nav-div').css("display","none");
+  //when 
+  $(document).scroll(function() {
+    if($(this)){
+      $(this).find('#to-top').css("display", "block");
+      $(this).find('#nav-div').css("display", "none");
+    }
   })
 
-  $('#to-top').click(function(){
+  //go up to the top of page 
+  $('#to-top').click(function() {
     $("html, body").animate({
       scrollTop: 0
-  }, 200);
+    }, 200);
   })
 });
